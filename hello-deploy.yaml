@@ -1,0 +1,17 @@
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: hello-world-deploy
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: hello1
+    spec:
+      containers:
+        - name: flux-test
+          image: openebs/flux-test:master-a000002
+          ports:
+            - containerPort: 8080
