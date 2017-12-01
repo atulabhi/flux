@@ -2,7 +2,7 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    flux.weave.works/automated: 'true'
+    flux.weave.works/automated: 'false'
   name: hello-world-deploy
 spec:
   replicas: 1
