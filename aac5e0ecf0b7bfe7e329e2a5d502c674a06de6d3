@@ -1,0 +1,1 @@
+{"jobID":"7409f4d0-f4c5-f475-d274-eddbde9c200e","spec":{"type":"policy","cause":{"Message":"","User":""},"spec":{"default:deployment/hello-world-deploy":{"add":{"locked":"true"},"remove":{}}}},"result":null}
