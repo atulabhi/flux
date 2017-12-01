@@ -1,9 +1,8 @@
----
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    flux.weave.works/automated: "true"
+    flux.weave.works/automated: 'false'
   name: hello-world-deploy
 spec:
   replicas: 1
@@ -13,7 +12,7 @@ spec:
         name: hello1
     spec:
       containers:
-        - name: flux-test
-          image: openebs/flux-test:master-000005
-          ports:
-            - containerPort: 8080
+      - image: openebs/flux-test:master-000005
+        name: flux-test
+        ports:
+        - containerPort: 8080
