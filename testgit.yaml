@@ -3,8 +3,7 @@ apiVersion: v1
  metadata:
    name: testgit
    labels:
-     app: python
- spec:
+      spec:
    containers:
      - name: testgit
        image: avneetsingh/pytest:v10
