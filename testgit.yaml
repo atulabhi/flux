@@ -11,7 +11,7 @@ spec:
     spec: 
       containers:
         - name: gittest
-          image: avneetsingh/test:v03
+          image: avneetsingh/test:v04
           command: ["/bin/bash"]
           args: ["-c", "while true;do echo hello;done"]
           ports:
