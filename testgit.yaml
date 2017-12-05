@@ -6,5 +6,7 @@ spec:
   containers:
   - name: gittest
     image: avneetsingh/test:v03
+    command: ["/bin/bash"]
+    args: ["-c", "while true;do echo hello;done"]
     ports:
     - containerPort: 80
