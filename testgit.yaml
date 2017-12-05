@@ -5,6 +5,6 @@ metadata:
 spec:
   containers:
   - name: gittest
-    image: avneetsingh/pytest:v10
+    image: avneetsingh/test:v3
     ports:
     - containerPort: 80
