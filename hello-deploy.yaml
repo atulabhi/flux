@@ -13,7 +13,7 @@ spec:
         name: hello1
     spec:
       containers:
-      - image: openebs/flux-test:master-000005
+      - image: openebs/flux-test:master-a000001
         name: flux-test
         ports:
         - containerPort: 8080
