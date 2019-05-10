@@ -1,0 +1,27 @@
+---
+apiVersion: openebs.io/v1alpha1
+kind: StoragePoolClaim
+metadata:
+  name: onprem-cstor-disk
+spec:
+  name: onprem-cstor-disk
+  type: disk
+  poolSpec:
+    poolType: striped
+  disks:
+   diskList:
+   - disk-25fb7b683383a095eefe9a5c62475b2d
+   - disk-bb2946e3959a1bd3b478c38373bc6cb2
+   - disk-e197559400287da6159138a3fdaa7cca
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: onprem-cstor-disk-sc
+  annotations:
+    openebs.io/cas-type: cstor
+    cas.openebs.io/config: |
+      - name: StoragePoolClaim
+        value: "onprem-cstor-disk"
+provisioner: openebs.io/provisioner-iscsi
+---
